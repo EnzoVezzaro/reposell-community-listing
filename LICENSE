@@ -1,0 +1,142 @@
+reposell Public Marketplace License
+Version 1.0, August 2026
+
+Copyright (c) 2026 Enzo Vezzaro and contributors
+
+This license governs use of the reposell Public Marketplace ("Software"),
+the community-operated marketplace implementation that anyone may deploy
+and operate independently.
+
+1. GRANT OF RIGHTS
+   Subject to the terms of this License, you are granted a perpetual,
+   worldwide, non-exclusive, royalty-free license to:
+   
+   a) Use, copy, modify, and distribute the Software in source and
+      binary forms;
+   
+   b) Create derivative works based on the Software;
+   
+   c) Sublicense the foregoing rights to third parties;
+   
+   d) Use the Software for any purpose, including commercial purposes;
+   
+   e) Operate your own instance as a community marketplace.
+
+2. PUBLIC MARKETPLACE REQUIREMENTS
+   Any deployment of this Software ("Instance") MUST:
+   
+   a) Retrieve the pricing policy from the official marketplace
+      endpoint (configurable via `pricing.endpoint`);
+   
+   b) Verify the official pricing policy signature using the
+      official verification key (`config/reposell/verification-key.pub`);
+   
+   c) Verify the official trust document for key rotation;
+   
+   d) NEVER independently define:
+      - Marketplace fee
+      - Public marketplace percentage
+      - Main marketplace percentage
+      These values MUST come from the signed official pricing policy.
+   
+   e) Register the Instance with the official marketplace via
+      the registration endpoint, establishing:
+      - Marketplace identity
+      - Marketplace endpoint
+      - Operator identity
+      - Public key
+      - Marketplace capabilities
+      - Protocol compatibility
+   
+   f) Run CI compliance validation on every deployment:
+      - `.github/workflows/verify.yml` MUST fetch official trust
+        metadata, verify signatures, fetch pricing policy, verify
+        pricing-policy signature, validate pricing policy, verify
+        marketplace identity, validate registration, validate protocol
+        compatibility;
+      - Deployment MUST fail if verification fails;
+      - Must NOT silently continue with stale or invalid trust data.
+   
+   g) At runtime on startup:
+      - Fetch trust metadata and verify signature
+      - Fetch pricing policy and verify signature
+      - Validate policy
+      - Enter safe state if policy cannot be validated
+      - MUST NOT invent fallback percentages (e.g., 50%)
+      - Cached policy may be used only per explicit expiration policy
+
+3. INDEPENDENT OPERATION
+   The Instance is an independent marketplace. It:
+   
+   a) MAY maintain its own database, search index, UI, cache,
+      infrastructure, deployment, and community catalog;
+   
+   b) MUST discover and index repository `/marketplace` endpoints
+      directly (not through the official marketplace database);
+   
+   c) Official trust and pricing remain externally verifiable.
+
+4. TRADEMARK NOTICE
+   "reposell" and the reposell logo are trademarks of Enzo Vezzaro.
+   This License does not grant permission to use these trademarks
+   except:
+   
+   a) To identify the original Software;
+   
+   b) To indicate compatibility with the reposell protocol
+      (e.g., "reposell-compatible public marketplace");
+   
+   c) In accordance with the reposell Trademark Policy.
+   
+   The Instance MUST NOT use "official" in its name or branding.
+
+5. PATENT GRANT
+   Each contributor grants you a perpetual, worldwide, non-exclusive,
+   royalty-free patent license to make, use, sell, offer for sale,
+   import, and otherwise transfer the Software, where such license
+   applies only to patent claims licensable by the contributor that
+   are necessarily infringed by their contribution.
+
+6. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY.
+
+7. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+   FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+   CONSEQUENTIAL DAMAGES ARISING FROM USE OF THE SOFTWARE.
+
+8. VALIDATION REQUIREMENT
+   Any Instance claiming to be a "reposell public marketplace" or
+   "reposell-compatible" MUST pass continuous validation:
+   
+   a) CI workflow `verify.yml` MUST pass on every deployment;
+   
+   b) Runtime MUST verify official pricing policy on startup;
+   
+   c) Runtime MUST enter safe state if verification fails;
+   
+   d) `acc check` MUST report no ACC0xx errors;
+   
+   e) The official protocol test suite MUST pass;
+   
+   f) Fee calculation MUST match official accounting test:
+      For $50 product, $5 fee, 50/50 split:
+      Repository owner: $45, Main marketplace: $2.50, Public marketplace: $2.50
+
+9. TERMINATION
+   This License terminates automatically if you breach its terms.
+   Rights may be reinstated if the breach is cured within 30 days
+   of notice.
+
+10. GOVERNING LAW
+    This License shall be governed by the laws of the Dominican
+    Republic, without regard to conflict-of-law principles.
+
+11. CONTRIBUTIONS
+    Contributions are accepted under the terms of this License.
+    By submitting a contribution, you represent that you have the
+    right to license it under these terms.
