@@ -20,7 +20,7 @@ description: Run your own community listing. Federated from the official registr
     <a class="lx-btn lx-btn--ghost" href="#failclosed">Fail-closed by design</a>
   </template>
   <template #chip>
-    <HomeCopyChip cmd="reposell listing federation sync" />
+    <HomeCopyChip cmd="npx @reposell/cli listing federation sync" />
   </template>
   <template #trust>
     <ul class="lx-trust" aria-label="Works with">
