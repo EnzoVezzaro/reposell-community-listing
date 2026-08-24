@@ -132,7 +132,7 @@ description: Run your own community listing. Federated from the official registr
       <a class="lx-link" href="https://listing.reposell.dev"><strong>Official listing</strong><span>The canonical discovery directory.</span></a>
       <a class="lx-link" href="https://github.com/EnzoVezzaro/reposell"><strong>reposell CLI</strong><span>Publish your repository to the registry.</span></a>
       <a class="lx-link" href="https://github.com/EnzoVezzaro/reposell-listing-public"><strong>This deployment</strong><span>Fork it and run your own.</span></a>
-      <a class="lx-link" href="/docs/"><strong>Documentation</strong><span>Federation, verification and trust.</span></a>
+      <a class="lx-link" href="/guide/"><strong>Documentation</strong><span>Federation, verification and trust.</span></a>
     </div>
   </section>
 </div>
