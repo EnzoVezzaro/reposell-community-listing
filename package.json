@@ -1,7 +1,7 @@
 {
   "name": "reposell-listing-public",
   "version": "0.1.0",
-  "description": "Community-operated reposell public listing - Static + CI",
+  "description": "Self-hosted community listing frontend, federated from the official reposell registry",
   "type": "module",
   "main": "index.js",
   "scripts": {
