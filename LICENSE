@@ -1,10 +1,10 @@
-reposell Public Marketplace License
+reposell Public Listing License
 Version 1.0, August 2026
 
 Copyright (c) 2026 Enzo Vezzaro and contributors
 
-This license governs use of the reposell Public Marketplace ("Software"),
-the community-operated marketplace implementation that anyone may deploy
+This license governs use of the reposell Public Listing ("Software"),
+the community-operated listing implementation that anyone may deploy
 and operate independently.
 
 1. GRANT OF RIGHTS
@@ -20,12 +20,12 @@ and operate independently.
    
    d) Use the Software for any purpose, including commercial purposes;
    
-   e) Operate your own instance as a community marketplace.
+   e) Operate your own instance as a community listing.
 
-2. PUBLIC MARKETPLACE REQUIREMENTS
+2. PUBLIC LISTING REQUIREMENTS
    Any deployment of this Software ("Instance") MUST:
    
-   a) Retrieve the pricing policy from the official marketplace
+   a) Retrieve the pricing policy from the official listing
       endpoint (configurable via `pricing.endpoint`);
    
    b) Verify the official pricing policy signature using the
@@ -34,25 +34,25 @@ and operate independently.
    c) Verify the official trust document for key rotation;
    
    d) NEVER independently define:
-      - Marketplace fee
-      - Public marketplace percentage
-      - Main marketplace percentage
+      - Listing fee
+      - Public listing percentage
+      - Main listing percentage
       These values MUST come from the signed official pricing policy.
    
-   e) Register the Instance with the official marketplace via
+   e) Register the Instance with the official listing via
       the registration endpoint, establishing:
-      - Marketplace identity
-      - Marketplace endpoint
+      - Listing identity
+      - Listing endpoint
       - Operator identity
       - Public key
-      - Marketplace capabilities
+      - Listing capabilities
       - Protocol compatibility
    
    f) Run CI compliance validation on every deployment:
       - `.github/workflows/verify.yml` MUST fetch official trust
         metadata, verify signatures, fetch pricing policy, verify
         pricing-policy signature, validate pricing policy, verify
-        marketplace identity, validate registration, validate protocol
+        listing identity, validate registration, validate protocol
         compatibility;
       - Deployment MUST fail if verification fails;
       - Must NOT silently continue with stale or invalid trust data.
@@ -66,13 +66,13 @@ and operate independently.
       - Cached policy may be used only per explicit expiration policy
 
 3. INDEPENDENT OPERATION
-   The Instance is an independent marketplace. It:
+   The Instance is an independent listing. It:
    
    a) MAY maintain its own database, search index, UI, cache,
       infrastructure, deployment, and community catalog;
    
-   b) MUST discover and index repository `/marketplace` endpoints
-      directly (not through the official marketplace database);
+   b) MUST discover and index repository `/listing` endpoints
+      directly (not through the official listing database);
    
    c) Official trust and pricing remain externally verifiable.
 
@@ -84,7 +84,7 @@ and operate independently.
    a) To identify the original Software;
    
    b) To indicate compatibility with the reposell protocol
-      (e.g., "reposell-compatible public marketplace");
+      (e.g., "reposell-compatible public listing");
    
    c) In accordance with the reposell Trademark Policy.
    
@@ -110,7 +110,7 @@ and operate independently.
    CONSEQUENTIAL DAMAGES ARISING FROM USE OF THE SOFTWARE.
 
 8. VALIDATION REQUIREMENT
-   Any Instance claiming to be a "reposell public marketplace" or
+   Any Instance claiming to be a "reposell public listing" or
    "reposell-compatible" MUST pass continuous validation:
    
    a) CI workflow `verify.yml` MUST pass on every deployment;
@@ -125,7 +125,7 @@ and operate independently.
    
    f) Fee calculation MUST match official accounting test:
       For $50 product, $5 fee, 50/50 split:
-      Repository owner: $45, Main marketplace: $2.50, Public marketplace: $2.50
+      Repository owner: $45, Main listing: $2.50, Public listing: $2.50
 
 9. TERMINATION
    This License terminates automatically if you breach its terms.

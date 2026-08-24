@@ -1,4 +1,4 @@
-# feature.md — Add a new public marketplace feature
+# feature.md — Add a new public listing feature
 
 1. Isolate the functionality: identify the directory boundary (e.g., `src/discovery/`, `src/purchase/`).
 2. Read the parent AGENTS.md to understand inheritable context.
@@ -66,7 +66,7 @@ export function StripeCheckout({ productId, pricing }) {
 import { describe, test, expect } from 'vitest';
 
 describe('discovery', () => {
-  test('discovers products from repo marketplace endpoints', async () => {
+  test('discovers products from repo listing endpoints', async () => {
     // Test implementation
   });
 });

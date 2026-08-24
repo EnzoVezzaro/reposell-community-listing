@@ -1,9 +1,9 @@
-# reposell Public Marketplace - Implementation Tracker
+# reposell Public Listing - Implementation Tracker
 
 ## Repository
-- **URL**: https://github.com/EnzoVezzaro/reposell-marketplace-public
-- **Product**: reposell public marketplace (Community-operated)
-- **Current State**: Empty repository (initial commit only)
+- **URL**: https://github.com/EnzoVezzaro/reposell-listing-public
+- **Product**: reposell public listing (Community-operated)
+- **Current State**: Docs site live; federated implementation pending — protocol vNext (D10–D15) plan in "Protocol Evolution Implementation Plan" section
 
 ---
 
@@ -25,7 +25,7 @@
 
 ## 2. Architecture Discovered
 
-Static marketplace architecture: Static frontend (Bun/Vite/React/TS/shadcn/ui/Tailwind) + CI enforcement (verify.yml MUST pass for deploy) + External pricing policy fetch + External trust verification + No Docker, no running servers, reposell.dev default domain.
+Static listing architecture: Static frontend (Bun/Vite/React/TS/shadcn/ui/Tailwind) + CI enforcement (verify.yml MUST pass for deploy) + External pricing policy fetch + External trust verification + No Docker, no running servers, reposell.dev default domain.
 
 ---
 
@@ -37,31 +37,31 @@ None - greenfield implementation.
 
 ## 4. Missing Functionality (Per Master Prompt)
 
-### Phase 15: Public Marketplace
+### Phase 15: Public Listing
 - [x] Static frontend (Bun + Vite + React + TS + shadcn/ui + Tailwind)
-- [x] Product discovery (from repo /marketplace endpoints)
+- [x] Product discovery (from repo /listing endpoints)
 - [x] Local catalog/index (static)
-- [x] Repository registration (from repo /marketplace endpoints)
+- [x] Repository registration (from repo /listing endpoints)
 - [x] Product verification (from repo manifests)
 - [x] Purchase flow (Stripe integration)
 - [x] License integration
 - [x] Official pricing integration (fetch + verify from reposell.dev)
 - [x] Official trust verification (fetch + verify signatures from reposell.dev)
-- [x] Marketplace registration (with official marketplace)
+- [x] Listing registration (with official listing)
 - [x] Settlement integration (report to official)
 
-### Phase 16: Public Marketplace Registration
-- [x] `marketplace register` command (or `reposell marketplace register`)
-- [x] Marketplace identity generation
-- [x] Marketplace key pair generation (Ed25519)
-- [x] Public key registration with official marketplace (reposell.dev)
+### Phase 16: Public Listing Registration
+- [x] `listing register` command (or `reposell listing register`)
+- [x] Listing identity generation
+- [x] Listing key pair generation (Ed25519)
+- [x] Public key registration with official listing (reposell.dev)
 - [x] Endpoint registration
 - [x] Operator information registration
 - [x] Fetch official trust metadata (reposell.dev)
 - [x] Fetch pricing policy (reposell.dev)
 - [x] Verify signatures (Ed25519)
 - [x] Validate configuration
-- [x] Complete registration (official issues MarketplaceIdentity)
+- [x] Complete registration (official issues ListingIdentity)
 
 ### Phase 17: Signed Trust/Policy Synchronization
 - [x] Official verification key storage (`config/reposell/verification-key.pub`)
@@ -71,7 +71,7 @@ None - greenfield implementation.
 - [x] Automatic synchronization (cron/scheduler via CI)
 - [x] Cache with expiration policy (default 24h)
 
-### Phase 18: Public Marketplace CI Enforcement
+### Phase 18: Public Listing CI Enforcement
 - [x] `.github/workflows/verify.yml` - Trust/pricing verification (MUST PASS for deploy)
 - [x] `.github/workflows/build.yml` - Build verification
 - [x] `.github/workflows/deploy.yml` - Deploy (depends on verify + build)
@@ -80,8 +80,8 @@ None - greenfield implementation.
 - [x] CI must fetch pricing policy (reposell.dev)
 - [x] CI must verify pricing-policy signature
 - [x] CI must validate pricing policy
-- [x] CI must verify marketplace identity
-- [x] CI must validate marketplace registration
+- [x] CI must verify listing identity
+- [x] CI must validate listing registration
 - [x] CI must validate protocol compatibility
 - [x] CI must run application tests
 - [x] CI must build
@@ -89,16 +89,16 @@ None - greenfield implementation.
 - [x] **Deployment MUST fail if verification fails** (safe state)
 
 ### Phase 19: End-to-End Integration
-- [x] Public marketplace registration with official (reposell.dev)
-- [x] Product discovery from repository /marketplace endpoints
+- [x] Public listing registration with official (reposell.dev)
+- [x] Product discovery from repository /listing endpoints
 - [x] Purchase flow with correct fee split
 - [x] License delivery
-- [x] Settlement reported to official marketplace
+- [x] Settlement reported to official listing
 
-### Phase 46: Public Marketplace Architecture Components
+### Phase 46: Public Listing Architecture Components
 - [x] Frontend (static, independently deployable)
 - [x] API (serverless, same official API at reposell.dev)
-- [x] Product discovery (direct repo /marketplace endpoints)
+- [x] Product discovery (direct repo /listing endpoints)
 - [x] Local catalog/index (static)
 - [x] Repository registration (from repo endpoints)
 - [x] Product verification (from repo manifests)
@@ -106,30 +106,30 @@ None - greenfield implementation.
 - [x] License integration
 - [x] Official pricing integration (fetch + verify from reposell.dev)
 - [x] Official trust verification (fetch + verify from reposell.dev)
-- [x] Marketplace registration (with official at reposell.dev)
+- [x] Listing registration (with official at reposell.dev)
 - [x] Settlement integration (report to official)
 - [x] Database (external, same pattern as official)
 - [x] CI compliance system (verify.yml MUST pass)
 
-### Phase 47: Public Marketplace Repository Requirements
+### Phase 47: Public Listing Repository Requirements
 - [x] `config/reposell/verification-key.pub` (official verification key - committed to repo)
 - [x] `.github/workflows/verify.yml` - Trust/pricing verification (MUST PASS on every deploy)
 - [x] `.github/workflows/build.yml` - Build verification
 - [x] `.github/workflows/deploy.yml` - Deploy (depends on verify + build)
 
-### Phase 48: Community Marketplace Registration
-- [x] Simple registration command (`marketplace register` or `reposell marketplace register`)
+### Phase 48: Community Listing Registration
+- [x] Simple registration command (`listing register` or `reposell listing register`)
 - [x] Automated process (10 steps: generate identity, key, fetch trust/pricing, verify, register)
 - [x] Manual config primarily: deployment, domain, database, payment credentials, operational settings
 - [x] Everything related to official reposell policy automated
 
-### Phase 49: Community Marketplace Operations
+### Phase 49: Community Listing Operations
 - [x] Automatic synchronization of:
   - Pricing (from official reposell.dev, verified)
   - Trust metadata (from official reposell.dev, verified)
   - Product schemas (from official)
   - Signature keys (from official)
-  - Marketplace policy (from official)
+  - Listing policy (from official)
 
 ### Phase 20: Runtime Trust
 - [x] Startup: fetch trust metadata, verify signature (from reposell.dev)
@@ -163,7 +163,7 @@ None - greenfield implementation.
 - [x] Secure HTTP headers
 - [x] Dependency auditing
 - [x] Supply chain protection
-- [x] **Never trust: repository manifests, marketplace manifests, GitHub webhooks, pricing responses, product metadata, client-side pricing, client-side transaction state**
+- [x] **Never trust: repository manifests, listing manifests, GitHub webhooks, pricing responses, product metadata, client-side pricing, client-side transaction state**
 - [x] **Price security: backend calculates final transaction, immutable accounting snapshot**
 - [x] **Runtime verification of official pricing policy - MUST NOT assume 50% if verification fails**
 
@@ -180,7 +180,7 @@ None - greenfield implementation.
 | 5 | Product verification | Phase 5 |
 | 6 | Purchase flow & payment | Phases 3, 5 |
 | 7 | License integration | Phase 7 |
-| 8 | Marketplace registration with official (reposell.dev) | Phases 3, 5 |
+| 8 | Listing registration with official (reposell.dev) | Phases 3, 5 |
 | 9 | Settlement integration | Phase 7 |
 | 11 | Frontend UI | Phase 1 |
 | 12 | CI compliance workflows (verify.yml MUST pass) | Phases 3, 5 |
@@ -223,7 +223,7 @@ packages/frontend/
 ### Database (External - Supabase/Neon Pattern)
 - `supabase/migrations/0001_initial_schema.sql` - Core tables
 - `supabase/migrations/0002_trust_metadata.sql` - Trust document storage
-- `supabase/migrations/0003_marketplace_identity.sql` - This marketplace's identity
+- `supabase/migrations/0003_listing_identity.sql` - This listing's identity
 
 ### Documentation (Per Section 55 - reposell.dev Context)
 - `README.md` - Updated with full project documentation
@@ -236,10 +236,10 @@ packages/frontend/
 - `CONFIGURATION.md` - Configuration reference
 - `DEPLOYMENT.md` - Deployment guide
 - `TROUBLESHOOTING.md` - Common issues
-- `MARKETPLACE_PROTOCOL.md` - Marketplace protocol details
+- `LISTING_PROTOCOL.md` - Listing protocol details
 - `PRICING.md` - Pricing policy documentation (fee calculation must match official: $50 -> $45 owner, $2.50 main, $2.50 public)
 - `SIGNATURES.md` - Signature system documentation
-- `MARKETPLACE_REGISTRATION.md` - Registration with official at reposell.dev
+- `LISTING_REGISTRATION.md` - Registration with official at reposell.dev
 
 ---
 
@@ -256,7 +256,7 @@ packages/frontend/
 | Unit tests (domain) | >95% |
 | Unit tests (application) | >90% |
 | Integration tests (database) | All repositories |
-| Integration tests (official marketplace) | Trust/pricing sync |
+| Integration tests (official listing) | Trust/pricing sync |
 | Integration tests (payment) | Stripe webhooks |
 | Integration tests (GitHub) | Repository discovery |
 | API tests | All endpoints |
@@ -281,8 +281,8 @@ packages/frontend/
   - [x] Fetch pricing policy (from reposell.dev)
   - [x] Verify pricing-policy signature
   - [x] Validate pricing policy
-  - [x] Verify marketplace identity
-  - [x] Validate marketplace registration
+  - [x] Verify listing identity
+  - [x] Validate listing registration
   - [x] Validate protocol compatibility
 - [x] Build verification
 - [x] Dependency audit
@@ -304,7 +304,7 @@ All documents listed in Section 7 must be created and maintained. All references
 
 ```typescript
 // In frontend entry or serverless init
-async function initializeMarketplace() {
+async function initializeListing() {
   // 1. Fetch trust metadata from reposell.dev
   const trust = await fetch('https://reposell.dev/trust.json').then(r => r.json());
   
@@ -340,7 +340,7 @@ async function initializeMarketplace() {
     return;
   }
   
-  // 5. Initialize marketplace
+  // 5. Initialize listing
   initializeWithVerifiedPolicy(pricing);
 }
 ```
@@ -357,27 +357,27 @@ If verification fails at runtime:
 ### Fee Calculation Must Match Official Accounting Test
 
 ```
-Test: Product price = $50, marketplace fee = $5, public_marketplace_percentage = 50%
+Test: Product price = $50, listing fee = $5, public_listing_percentage = 50%
 Expected:
   Repository owner:    $45
-  Main marketplace:    $2.50
-  Public marketplace:  $2.50
+  Main listing:    $2.50
+  Public listing:  $2.50
 ```
 
-All public marketplace implementations MUST pass this test at unit, integration, API, and E2E levels.
+All public listing implementations MUST pass this test at unit, integration, API, and E2E levels.
 
-## 14. Definition of Done (Public Marketplace Specific)
+## 14. Definition of Done (Public Listing Specific)
 
-- [x] Public marketplace runs independently (static, hosted)
+- [x] Public listing runs independently (static, hosted)
 - [x] Official verification key present at `config/reposell/verification-key.pub`
 - [x] CI workflows verify trust/pricing signatures (deploy fails if invalid)
 - [x] Runtime verifies official pricing policy on startup (from reposell.dev)
 - [x] Safe state entered if verification fails (no fallback 50%)
-- [x] Marketplace registration with official (reposell.dev) works
-- [x] Product discovery from repository /marketplace endpoints works
+- [x] Listing registration with official (reposell.dev) works
+- [x] Product discovery from repository /listing endpoints works
 - [x] Purchase flow works with correct fee split
 - [x] Licenses issued correctly
-- [x] Settlement reported to official marketplace
+- [x] Settlement reported to official listing
 - [x] Automatic sync of pricing/trust works
 - [x] Key rotation via trust document works
 - [x] All tests pass
@@ -385,3 +385,47 @@ All public marketplace implementations MUST pass this test at unit, integration,
 - [ ] Security audit passes
 - [ ] Can be deployed by community operator with minimal config
 - [x] Default domain: https://reposell.dev configured
+---
+
+## Protocol Evolution Implementation Plan (2026-08) — Decisions D11/D12/D15
+
+Source specs: `TRACKING.md` (D11, D12, D15) · protocol pages `listing-endpoint` (federation model), `listing-network`, `gamification`.
+Role change: this instance is a **FEDERATED VIEW of the official listing** — it no longer discovers repositories independently.
+
+### A. Federation client (D11)
+
+| File | Purpose |
+|------|---------|
+| `src/federation/register.ts` | operator registration with official listing: listing identity, endpoint, operator, public key, protocol version → authorization |
+| `src/federation/sync.ts` | scheduled catalog pull from official registry feed; verify Ed25519 signatures on every payload before acceptance |
+| `src/federation/trust.ts` | official verification key at `config/reposell/verification-key.pub`; trust-document rotation support |
+
+### B. Local catalog + UI
+
+- Store synced catalog locally (own database/index allowed); render own UI
+- Product pages show Listing JSON + LIVE client-side `/health` fetch to owner's Pages (same dual-source pattern as official)
+- Outbound buy links carry referral attribution (`transaction.listing_id`) → seller `/sell` → seller's Stripe
+
+### C. Safe state (non-negotiable)
+
+- If federation data cannot be fetched+verified at startup → refuse to serve catalog (fail closed)
+- Cached policy only per explicit expiration policy; never invent fees or fallback percentages
+- Never define fee splits locally — economics come exclusively from the signed official pricing policy (`reposell/pricing/v1`)
+
+### D. Network participation (D12)
+
+- Consume public reputation/leaderboard artifacts for display (read-only)
+- Referral share ($2.50 of $5 default fee) settles via official settlement reports
+- Anti-gaming signals respected: no local XP authority, no self-reported stats
+
+### E. CI compliance (existing verify.yml extended)
+
+Fetch trust metadata → verify signatures → fetch+verify pricing policy → validate federation state → run tests → build → deploy. Any verification failure MUST fail deployment and put runtime in safe state.
+
+### Tests required
+
+federation signature round-trip · sync idempotency · safe-state on bad signatures · referral attribution correctness · pricing-policy rejection on tamper
+
+### Docs required
+
+Update site copy: "community-operated federated listing" replacing independent-discovery language.
