@@ -9,7 +9,7 @@ Deploying your own public listing is a fork-and-configure job. There are no serv
 
 ## 1. Fork the repository
 
-Fork [EnzoVezzaro/reposell-listing-public](https://github.com/EnzoVezzaro/reposell-listing-public) and clone your fork. Everything you need ships in the repo: the frontend, the federation sync, the CI workflows.
+Fork [EnzoVezzaro/reposell-community-listing](https://github.com/EnzoVezzaro/reposell-community-listing) and clone your fork. Everything you need ships in the repo: the frontend, the federation sync, the CI workflows.
 
 ## 2. Configure the official pricing endpoint
 

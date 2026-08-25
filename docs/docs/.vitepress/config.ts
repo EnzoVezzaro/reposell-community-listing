@@ -4,15 +4,15 @@ export default defineConfig({
   title: 'reposell Public Listing',
   description: 'Community-operated reposell public listing - Deploy your own listing instance',
   lang: 'en-US',
-  base: '/reposell-listing-public/',
+  base: '/reposell-community-listing/',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&family=Baloo+2:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap' }],
-    ['meta', { property: 'og:image', content: '/reposell-listing-public/branding/logo.png' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/reposell-listing-public/branding/icon.png' }],
+    ['meta', { property: 'og:image', content: '/reposell-community-listing/branding/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/reposell-community-listing/branding/icon.png' }],
     ['meta', { name: 'theme-color', content: '#0af188' }],
     // pre-paint: pin home to dark + arm anime.js boot-hide before first frame
     ['script', {}, `(function(){try{var p=location.pathname,h=p==='/docs/'||p==='/docs/index.html'||p==='/'||p==='/index.html';if(!h)return;var d=document.documentElement;d.classList.add('rs-home','dark');if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.classList.add('lx-boot')}catch(e){}})()`],
-    ['link', { rel: 'icon', type: 'image/png', href: '/reposell-listing-public/branding/icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/reposell-community-listing/branding/icon.png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['meta', { name: 'theme-color', content: '#0af188' }],
     ['meta', { name: 'description', content: 'Community-operated reposell public listing - Deploy your own listing instance' }],
@@ -49,7 +49,7 @@ export default defineConfig({
       ],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/EnzoVezzaro/reposell-listing-public' },
+      { icon: 'github', link: 'https://github.com/EnzoVezzaro/reposell-community-listing' },
     ],
     footer: {
       message: 'Made with ☕ and 🎧 by a solo developer from the Dominican Republic.',
@@ -59,19 +59,12 @@ export default defineConfig({
       provider: 'local',
     },
     editLink: {
-      pattern: 'https://github.com/EnzoVezzaro/reposell-listing-public/edit/main/docs/docs/:path',
+      pattern: 'https://github.com/EnzoVezzaro/reposell-community-listing/edit/main/docs/docs/:path',
       text: 'Edit this page on GitHub',
     },
   },
   markdown: {
     theme: 'github-dark',
     lineNumbers: true,
-  },
-  vite: {
-    resolve: {
-      alias: {
-        '@reposell/design-system': '../../../../branding',
-      },
-    },
   },
 })

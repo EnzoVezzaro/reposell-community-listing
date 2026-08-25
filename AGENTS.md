@@ -21,7 +21,7 @@ The reposell public listing is a community-operated listing implementation that 
 
 ## Ownership
 
-Owner: packages/backend
+Owner: reposell-community-listing
 
 ## Inputs
 

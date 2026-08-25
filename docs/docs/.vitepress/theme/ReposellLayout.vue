@@ -3,7 +3,7 @@ import { ref, watch, watchEffect, onMounted, onBeforeUnmount } from 'vue'
 import { useData, withBase } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { initLandingMotion } from './landingMotion'
-import pkg from '../../../package.json'
+import pkg from '../../../../../package.json'
 
 const Layout = DefaultTheme.Layout
 
@@ -121,7 +121,7 @@ async function fetchVersion() {
       version.value = cached
       return
     }
-    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-listing-public-listing-public/releases/latest', {
+    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-community-listing-listing-public/releases/latest', {
       headers: { Accept: 'application/vnd.github+json' },
     })
     if (!res.ok) return
@@ -143,7 +143,7 @@ async function fetchStars() {
       stars.value = cached
       return
     }
-    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-listing-public', {
+    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-community-listing', {
       headers: { Accept: 'application/vnd.github+json' },
     })
     if (!res.ok) return
@@ -176,8 +176,8 @@ async function fetchStars() {
 
     <template #nav-bar-content-after>
       <div class="rs-nav-extra">
-        <a class="rs-pill rs-pill--ver" href="https://github.com/EnzoVezzaro/reposell-listing-public/releases" target="_blank" rel="noopener">{{ version || fallbackVersion }}</a>
-        <a class="rs-pill rs-pill--star" href="https://github.com/EnzoVezzaro/reposell-listing-public" target="_blank" rel="noopener" aria-label="Star reposell on GitHub">
+        <a class="rs-pill rs-pill--ver" href="https://github.com/EnzoVezzaro/reposell-community-listing/releases" target="_blank" rel="noopener">{{ version || fallbackVersion }}</a>
+        <a class="rs-pill rs-pill--star" href="https://github.com/EnzoVezzaro/reposell-community-listing" target="_blank" rel="noopener" aria-label="Star reposell on GitHub">
           <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M8 .8l2.1 4.6 5 .5-3.7 3.4 1 4.9L8 11.7l-4.4 2.5 1-4.9L.9 5.9l5-.5L8 .8z" />
           </svg>

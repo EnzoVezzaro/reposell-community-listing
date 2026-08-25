@@ -1,7 +1,7 @@
 # reposell Public Listing - Implementation Tracker
 
 ## Repository
-- **URL**: https://github.com/EnzoVezzaro/reposell-listing-public
+- **URL**: https://github.com/EnzoVezzaro/reposell-community-listing
 - **Product**: reposell public listing (Community-operated)
 - **Current State**: Docs site live; federated implementation pending — protocol vNext (D10–D15) plan in "Protocol Evolution Implementation Plan" section
 

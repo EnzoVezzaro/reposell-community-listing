@@ -1,23 +1,21 @@
 {
-  "name": "reposell-listing-public",
+  "name": "reposell-community-listing",
   "version": "0.1.0",
   "description": "Self-hosted community listing frontend, federated from the official reposell registry",
   "type": "module",
-  "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "oxlint",
     "typecheck": "tsc --noEmit",
-    "acc:check": "acc check",
-    "oxlint": "oxlint",
     "docs:dev": "vitepress dev docs/docs",
     "docs:build": "vitepress build docs/docs",
     "docs:preview": "vitepress preview docs/docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EnzoVezzaro/reposell-listing-public.git"
+    "url": "git+https://github.com/EnzoVezzaro/reposell-community-listing.git"
   },
   "keywords": [
     "reposell",
@@ -28,9 +26,9 @@
   "author": "Enzo Vezzaro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EnzoVezzaro/reposell-listing-public/issues"
+    "url": "https://github.com/EnzoVezzaro/reposell-community-listing/issues"
   },
-  "homepage": "https://github.com/EnzoVezzaro/reposell-listing-public#readme",
+  "homepage": "https://github.com/EnzoVezzaro/reposell-community-listing#readme",
   "devDependencies": {
     "@oxlint/plugins": "^1.79.0",
     "animejs": "^4.5.0",

@@ -19,7 +19,7 @@ Before deploying, confirm you have:
 
 GitHub Pages is the reference path: zero servers, zero cost, and CI lives next to deployment in the same repository.
 
-1. Fork [EnzoVezzaro/reposell-listing-public](https://github.com/EnzoVezzaro/reposell-listing-public)
+1. Fork [EnzoVezzaro/reposell-community-listing](https://github.com/EnzoVezzaro/reposell-community-listing)
 2. Ensure `config/reposell/verification-key.pub` is present (it ships with the repo)
 3. Configure the official listing URL (`REPOSELL_OFFICIAL_LISTING_URL`, e.g. `https://listing.reposell.dev`) and the official pricing endpoint (`/api/v1/pricing`)
 4. Enable GitHub Pages with the provided workflow as the source

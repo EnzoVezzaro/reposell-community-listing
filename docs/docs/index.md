@@ -131,7 +131,7 @@ description: Run your own community listing. Federated from the official registr
     <div class="lx-links">
       <a class="lx-link" href="https://listing.reposell.dev"><strong>Official listing</strong><span>The canonical discovery directory.</span></a>
       <a class="lx-link" href="https://github.com/EnzoVezzaro/reposell"><strong>reposell CLI</strong><span>Publish your repository to the registry.</span></a>
-      <a class="lx-link" href="https://github.com/EnzoVezzaro/reposell-listing-public"><strong>This deployment</strong><span>Fork it and run your own.</span></a>
+      <a class="lx-link" href="https://github.com/EnzoVezzaro/reposell-community-listing"><strong>This deployment</strong><span>Fork it and run your own.</span></a>
       <a class="lx-link" href="/guide/"><strong>Documentation</strong><span>Federation, verification and trust.</span></a>
     </div>
   </section>
@@ -159,8 +159,8 @@ description: Run your own community listing. Federated from the official registr
     <div class="lx-bottombar">
       <span>© 2026 Enzo Vezzaro · MIT License</span>
       <span class="lx-socials">
-        <a href="https://github.com/EnzoVezzaro/reposell-listing-public" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://github.com/EnzoVezzaro/reposell-listing-public/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/EnzoVezzaro/reposell-community-listing" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/EnzoVezzaro/reposell-community-listing/issues" target="_blank" rel="noopener">Issues</a>
       </span>
       <VersionChip />
     </div>
