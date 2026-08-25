@@ -5,6 +5,7 @@ export default defineConfig({
   description: 'Community-operated reposell listing — deploy your own listing instance',
   lang: 'en-US',
   base: '/',
+  ignoreDeadLinks: true,
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&family=Baloo+2:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap' }],
     ['meta', { property: 'og:image', content: '/branding/logo.png' }],
@@ -59,7 +60,7 @@ export default defineConfig({
       provider: 'local',
     },
     editLink: {
-      pattern: 'https://github.com/EnzoVezzaro/reposell-community-listing/edit/main/docs/docs/:path',
+      pattern: 'https://github.com/EnzoVezzaro/reposell-community-listing/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
   },
