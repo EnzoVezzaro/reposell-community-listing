@@ -3,15 +3,26 @@
   "version": "0.1.0",
   "description": "Self-hosted community listing frontend, federated from the official reposell registry",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "oxlint",
     "typecheck": "tsc --noEmit",
-    "docs:dev": "vitepress dev docs/docs",
-    "docs:build": "vitepress build docs/docs",
-    "docs:preview": "vitepress preview docs/docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
