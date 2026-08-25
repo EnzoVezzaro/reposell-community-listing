@@ -3,7 +3,7 @@ import { ref, watch, watchEffect, onMounted, onBeforeUnmount } from 'vue'
 import { useData, withBase } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { initLandingMotion } from './landingMotion'
-import pkg from '../../../../package.json'
+import pkg from '../../../package.json'
 
 const Layout = DefaultTheme.Layout
 
@@ -121,7 +121,7 @@ async function fetchVersion() {
       version.value = cached
       return
     }
-    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-community-listing-listing-public/releases/latest', {
+    const res = await fetch('https://api.github.com/repos/EnzoVezzaro/reposell-community-listing/releases/latest', {
       headers: { Accept: 'application/vnd.github+json' },
     })
     if (!res.ok) return
