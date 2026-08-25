@@ -5,7 +5,7 @@ description: Official key pinning, trust documents for rotation, and why instanc
 
 # Verification Keys
 
-Every artifact a public listing instance accepts — trust documents, the pricing policy, federation payloads — carries an Ed25519 signature. Verification is only as good as the key you verify against, so key handling is a first-class part of the architecture.
+Every artifact a community listing instance accepts — trust documents, the pricing policy, federation payloads — carries an Ed25519 signature. Verification is only as good as the key you verify against, so key handling is a first-class part of the architecture.
 
 ## The pinned official verification key
 

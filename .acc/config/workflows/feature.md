@@ -1,4 +1,4 @@
-# feature.md — Add a new public listing feature
+# feature.md — Add a new community listing feature
 
 1. Isolate the functionality: identify the directory boundary (e.g., `src/discovery/`, `src/purchase/`).
 2. Read the parent AGENTS.md to understand inheritable context.

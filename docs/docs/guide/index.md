@@ -1,11 +1,11 @@
 ---
-title: What is the public listing?
+title: What is the community listing?
 description: A community-operated listing instance anyone can run — a federated view of the official reposell listing.
 ---
 
-# What is the public listing?
+# What is the community listing?
 
-The reposell public listing is a community-operated listing instance. Anyone can deploy and operate one. It is not an independent marketplace — it is a **federated view of the official reposell listing** at [listing.reposell.dev](https://listing.reposell.dev).
+The reposell community listing is a community-operated listing instance. Anyone can deploy and operate one. It is not an independent marketplace — it is a **federated view of the official reposell listing** at [listing.reposell.dev](https://listing.reposell.dev).
 
 The official listing stays the trust and settlement layer of the network. Your instance joins that network as a discovery node: it registers itself with the official listing, pulls its catalog through verified federation, and serves products locally under its own domain and UI.
 

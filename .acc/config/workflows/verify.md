@@ -1,7 +1,7 @@
 # verify.md — CI Verification (MUST PASS for deployment)
 
 This workflow MUST pass on every deployment. It enforces the runtime trust enforcement
-policy for the public listing.
+policy for the community listing.
 
 ## Verification Steps
 
@@ -33,7 +33,7 @@ For a $50 product with $5 fee and 50/50 split:
 - Main listing: $2.50
 - Public listing: $2.50
 
-All public listing implementations MUST pass this test at unit, integration, API, and E2E levels.
+All community listing implementations MUST pass this test at unit, integration, API, and E2E levels.
 
 ## CI Workflow Reference
 

@@ -10,13 +10,13 @@ web
 
 ## Users
 
-**Primary**: DevOps/platform engineers deploying self-hosted public listing instances. They need Docker/K8s configs, CI/CD pipelines, compliance checklists.
+**Primary**: DevOps/platform engineers deploying self-hosted community listing instances. They need Docker/K8s configs, CI/CD pipelines, compliance checklists.
 
 **Secondary**: Community operators running independent listings — need governance docs, upgrade procedures, troubleshooting.
 
 ## Product Purpose
 
-Community-operated public listing reference implementation. Features:
+Community-operated community listing reference implementation. Features:
 - Full protocol compliance (discovery, verification, settlement)
 - Automatic pricing policy + trust document sync from official
 - Safe-state default (enters read-only if verification fails)

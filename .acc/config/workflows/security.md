@@ -1,4 +1,4 @@
-# security.md — Security-sensitive changes for public listing
+# security.md — Security-sensitive changes for community listing
 
 1. Run `acc check` to validate current state.
 2. Run `acc context --include memory` to review learned security notes.

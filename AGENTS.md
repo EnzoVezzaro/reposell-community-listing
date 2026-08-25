@@ -1,8 +1,8 @@
-# reposell Public Listing
+# reposell Community Listing
 
 ## Purpose
 
-The reposell public listing is a community-operated listing implementation that anyone can deploy and operate. It is a FEDERATED VIEW of the official listing: it registers itself with the official listing, obtains its product catalog through verified federation (never by indexing repositories independently), retrieves and verifies official pricing policies, and processes purchases with correct fee splits according to signed pricing policies.
+The reposell community listing is a community-operated listing implementation that anyone can deploy and operate. It is a FEDERATED VIEW of the official listing: it registers itself with the official listing, obtains its product catalog through verified federation (never by indexing repositories independently), retrieves and verifies official pricing policies, and processes purchases with correct fee splits according to signed pricing policies.
 
 ## Responsibilities
 
@@ -12,7 +12,7 @@ The reposell public listing is a community-operated listing implementation that 
 - Verify federation data using official verification key
 - Fetch and verify official pricing policy on startup and periodically
 - Verify official trust document for key rotation
-- Register with official listing as a public listing instance
+- Register with official listing as a community listing instance
 - Process purchases with fee calculation from signed pricing policy
 - Issue licenses and integrate with repository access/fork workflow
 - Report settlements to official listing
@@ -64,7 +64,7 @@ Owner: reposell-community-listing
 
 ## Architecture
 
-The public listing is independently deployable:
+The community listing is independently deployable:
 
 1. **Frontend** - Bun + Vite + React + TypeScript + shadcn/ui + Tailwind
 2. **API** - Versioned REST API for local operations

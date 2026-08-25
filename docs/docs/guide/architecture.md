@@ -1,11 +1,11 @@
 ---
 title: Architecture
-description: Components of a public listing instance — static frontend, federation sync, signature verification, pricing policy sync, safe state.
+description: Components of a community listing instance — static frontend, federation sync, signature verification, pricing policy sync, safe state.
 ---
 
 # Architecture
 
-A public listing instance is deliberately small: a static frontend, a federation sync process, and a verification layer that gates everything. There are no servers to run beyond static hosting and no Docker or Kubernetes topology — the deployment surface is generated JSON plus static files.
+A community listing instance is deliberately small: a static frontend, a federation sync process, and a verification layer that gates everything. There are no servers to run beyond static hosting and no Docker or Kubernetes topology — the deployment surface is generated JSON plus static files.
 
 ```text
         OFFICIAL LISTING (listing.reposell.dev)
@@ -67,7 +67,7 @@ Rules enforced by design:
 
 - Fee splits come **exclusively** from the verified policy (`reposell/pricing/v1`). The instance never defines fees locally and has no fallback percentages — not even "reasonable" ones.
 - Cached policies are honored only per the explicit expiration policy (default 24 hours). An expired cache is treated as unverified.
-- The canonical accounting invariant must hold: a $50 product with a $5 fee split 50/50 yields $45 to the owner, $2.50 to the main listing, $2.50 to the public listing.
+- The canonical accounting invariant must hold: a $50 product with a $5 fee split 50/50 yields $45 to the owner, $2.50 to the main listing, $2.50 to the community listing.
 
 ## Safe state
 

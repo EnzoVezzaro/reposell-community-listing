@@ -1,11 +1,11 @@
 ---
-title: Deploying a public listing
+title: Deploying a community listing
 description: GitHub Pages or any static host — CI compliance validation gates every deployment, scheduled actions keep the catalog in sync.
 ---
 
-# Deploying a Public Listing
+# Deploying a Community Listing
 
-A public listing instance deploys as a **static site**. There are no servers to run, no containers to orchestrate, no database to host for the frontend itself — the build produces static files that read generated JSON from verified federation syncs.
+A community listing instance deploys as a **static site**. There are no servers to run, no containers to orchestrate, no database to host for the frontend itself — the build produces static files that read generated JSON from verified federation syncs.
 
 ## Prerequisites
 

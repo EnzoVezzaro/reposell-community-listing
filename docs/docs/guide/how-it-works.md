@@ -5,7 +5,7 @@ description: The federation flow — register, verify, pull the verified catalog
 
 # How It Works
 
-A public listing instance participates in the reposell network through a strict sequence: register with the official listing, pass identity verification, pull the catalog through verified federation, then serve it locally. Every step that involves external data ends in an Ed25519 signature check.
+A community listing instance participates in the reposell network through a strict sequence: register with the official listing, pass identity verification, pull the catalog through verified federation, then serve it locally. Every step that involves external data ends in an Ed25519 signature check.
 
 ## 1. Register the instance
 

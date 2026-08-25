@@ -1,4 +1,4 @@
-# reposell Public Listing
+# reposell Community Listing
 
 A community-operated listing frontend, federated from the official reposell registry. Anyone can deploy and operate an instance.
 

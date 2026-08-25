@@ -1,8 +1,8 @@
-# reposell Public Listing - Implementation Tracker
+# reposell Community Listing - Implementation Tracker
 
 ## Repository
 - **URL**: https://github.com/EnzoVezzaro/reposell-community-listing
-- **Product**: reposell public listing (Community-operated)
+- **Product**: reposell community listing (Community-operated)
 - **Current State**: Docs site live; federated implementation pending — protocol vNext (D10–D15) plan in "Protocol Evolution Implementation Plan" section
 
 ---
@@ -37,7 +37,7 @@ None - greenfield implementation.
 
 ## 4. Missing Functionality (Per Master Prompt)
 
-### Phase 15: Public Listing
+### Phase 15: Community Listing
 - [x] Static frontend (Bun + Vite + React + TS + shadcn/ui + Tailwind)
 - [x] Product discovery (from repo /listing endpoints)
 - [x] Local catalog/index (static)
@@ -50,7 +50,7 @@ None - greenfield implementation.
 - [x] Listing registration (with official listing)
 - [x] Settlement integration (report to official)
 
-### Phase 16: Public Listing Registration
+### Phase 16: Community Listing Registration
 - [x] `listing register` command (or `reposell listing register`)
 - [x] Listing identity generation
 - [x] Listing key pair generation (Ed25519)
@@ -71,7 +71,7 @@ None - greenfield implementation.
 - [x] Automatic synchronization (cron/scheduler via CI)
 - [x] Cache with expiration policy (default 24h)
 
-### Phase 18: Public Listing CI Enforcement
+### Phase 18: Community Listing CI Enforcement
 - [x] `.github/workflows/verify.yml` - Trust/pricing verification (MUST PASS for deploy)
 - [x] `.github/workflows/build.yml` - Build verification
 - [x] `.github/workflows/deploy.yml` - Deploy (depends on verify + build)
@@ -95,7 +95,7 @@ None - greenfield implementation.
 - [x] License delivery
 - [x] Settlement reported to official listing
 
-### Phase 46: Public Listing Architecture Components
+### Phase 46: Community Listing Architecture Components
 - [x] Frontend (static, independently deployable)
 - [x] API (serverless, same official API at reposell.dev)
 - [x] Product discovery (direct repo /listing endpoints)
@@ -111,7 +111,7 @@ None - greenfield implementation.
 - [x] Database (external, same pattern as official)
 - [x] CI compliance system (verify.yml MUST pass)
 
-### Phase 47: Public Listing Repository Requirements
+### Phase 47: Community Listing Repository Requirements
 - [x] `config/reposell/verification-key.pub` (official verification key - committed to repo)
 - [x] `.github/workflows/verify.yml` - Trust/pricing verification (MUST PASS on every deploy)
 - [x] `.github/workflows/build.yml` - Build verification
@@ -364,9 +364,9 @@ Expected:
   Public listing:  $2.50
 ```
 
-All public listing implementations MUST pass this test at unit, integration, API, and E2E levels.
+All community listing implementations MUST pass this test at unit, integration, API, and E2E levels.
 
-## 14. Definition of Done (Public Listing Specific)
+## 14. Definition of Done (Community Listing Specific)
 
 - [x] Public listing runs independently (static, hosted)
 - [x] Official verification key present at `config/reposell/verification-key.pub`

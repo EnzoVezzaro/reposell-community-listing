@@ -1,4 +1,4 @@
-# release.md — Release a new public listing version
+# release.md — Release a new community listing version
 
 1. Update version in `package.json` (patch/minor/major).
 2. Update `CHANGELOG.md` with release notes.

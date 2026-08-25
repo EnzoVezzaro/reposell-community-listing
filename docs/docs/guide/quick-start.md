@@ -1,11 +1,11 @@
 ---
 title: Quick Start
-description: Deploy your own reposell public listing instance — fork, configure, pin the verification key, deploy as a static site.
+description: Deploy your own reposell community listing instance — fork, configure, pin the verification key, deploy as a static site.
 ---
 
 # Quick Start
 
-Deploying your own public listing is a fork-and-configure job. There are no servers to provision — your instance ships as a static site with CI enforcing compliance on every deploy.
+Deploying your own community listing is a fork-and-configure job. There are no servers to provision — your instance ships as a static site with CI enforcing compliance on every deploy.
 
 ## 1. Fork the repository
 

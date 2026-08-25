@@ -5,7 +5,7 @@ description: Fail-closed behavior — what happens when verification fails and w
 
 # Safe State
 
-The public listing has no authority to invent economics. When verification of official policy fails, the instance **fails closed**: it stops rather than guesses. This is not error handling bolted on afterwards — it is the design constraint that makes a community-operated instance trustworthy.
+The community listing has no authority to invent economics. When verification of official policy fails, the instance **fails closed**: it stops rather than guesses. This is not error handling bolted on afterwards — it is the design constraint that makes a community-operated instance trustworthy.
 
 ## When safe state triggers
 
@@ -60,4 +60,4 @@ There is no manual override to skip verification and serve anyway. If that is wh
 
 An independent instance earns trust by giving up discretion. Buyers and sellers cannot inspect your server, but they can rely on one promise: *this instance either operates under the official signed policy or it does not operate.* Safe state is that promise being kept.
 
-The canonical accounting invariant the policy must satisfy — $50 product, $5 fee, 50/50 split = owner $45, main listing $2.50, public listing $2.50 — is replayed by CI on every deploy, so the math is checked, not assumed.
+The canonical accounting invariant the policy must satisfy — $50 product, $5 fee, 50/50 split = owner $45, main listing $2.50, community listing $2.50 — is replayed by CI on every deploy, so the math is checked, not assumed.
