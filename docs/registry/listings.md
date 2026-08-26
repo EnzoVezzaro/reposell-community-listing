@@ -2,11 +2,13 @@
 # Connected Listings
 
 Federated from the canonical reposell registry (`https://listing.reposell.dev/federation/v1/snapshot.json`). Last sync:
-2026-08-26T12:59:16.360Z
+2026-08-26T15:43:44.095Z
 
-| Repository | Release | Discovery | Store |
-| --- | --- | --- | --- |
-| `EnzoVezzaro/reposell-example` | v0.1.0 | `5 USD` | [Buy /sell](https://EnzoVezzaro.github.io/reposell-example/sell/) |
+| Repository | Release | Discovery | Details | Community |
+| --- | --- | --- | --- | --- |
+| `EnzoVezzaro/reposell-example` | v0.1.0 | `5 USD` | [View details](https://listing.reposell.dev/registry/tools/enzovezzaro-reposell-example/) | — |
 
 Every entry is verified against the seller's live `/sell` endpoint before
-it appears here. Run your site build to re-sync the federated index.
+it appears here. Visit the [official listing](https://listing.reposell.dev/registry/listings)
+for the full discovery and purchase flow. Run your site build to re-sync the
+federated index.
