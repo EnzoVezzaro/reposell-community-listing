@@ -144,7 +144,7 @@ description: Run your own community listing. Federated from the official registr
       <div class="lx-fcol lx-fbrand">
         <h4>reposell listing — self-host</h4>
         <p class="lx-fblurb">A community discovery directory, federated from the official registry. Fail-closed by design.</p>
-        <p>Made with ☕ and 🎧 by Enzo Vezzaro — a solo developer from the Dominican Republic, building for a team tomorrow.</p>
+        <p>Built by Enzo Vezzaro — from the Dominican Republic, for the world.</p>
       </div>
       <nav class="lx-fcol" aria-label="Network">
         <h4>Network</h4>

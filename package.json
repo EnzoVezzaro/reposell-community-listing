@@ -1,6 +1,6 @@
 {
   "name": "reposell-community-listing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Self-hosted community listing frontend, federated from the official reposell registry",
   "type": "module",
   "main": "dist/index.js",
