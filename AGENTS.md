@@ -60,7 +60,7 @@ Owner: reposell-community-listing
 - MUST enter safe state if verification fails (no fallback 50%)
 - Cached policy only per explicit expiration policy
 - All financial operations MUST be idempotent
-- MUST match official accounting test: $50 product, $5 fee, 50/50 split = Owner $45, Main $2.50, Public $2.50
+- **Note:** Community referral economics are not yet implemented. The Main/Public listing splits are reserved for future use. Currently, the listing fee goes entirely to reposell.
 
 ## Architecture
 

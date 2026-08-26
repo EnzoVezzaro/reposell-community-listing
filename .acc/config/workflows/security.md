@@ -21,7 +21,7 @@
 - [ ] No hardcoded listing fee or percentage splits
 - [ ] Caching has explicit expiration policy
 - [ ] Listing registration current with official
-- [ ] Fee calculation matches official accounting test: $50 -> Owner $45, Main $2.50, Public $2.50
+- [ ] Fee calculation matches official accounting test: $50 -> Owner $45, Main $2.50, Public $2.50 (future — when community listings are supported; currently community gets nothing)
 - [ ] Never trust: repository manifests, listing manifests, GitHub webhook payloads, pricing responses, product metadata, client-side pricing, client-side transaction state
 
 ## Security Audit Triggers

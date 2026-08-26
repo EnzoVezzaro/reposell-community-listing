@@ -356,9 +356,11 @@ If verification fails at runtime:
 
 ### Fee Calculation Must Match Official Accounting Test
 
+**Note:** Community referral economics are not yet implemented. The Main/Public listing splits are reserved for future use. Currently, the listing fee goes entirely to reposell.
+
 ```
 Test: Product price = $50, listing fee = $5, public_listing_percentage = 50%
-Expected:
+Expected (future — when community listings are supported):
   Repository owner:    $45
   Main listing:    $2.50
   Public listing:  $2.50

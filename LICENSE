@@ -126,6 +126,8 @@ and operate independently.
    f) Fee calculation MUST match official accounting test:
       For $50 product, $5 fee, 50/50 split:
       Repository owner: $45, Main listing: $2.50, Public listing: $2.50
+      **Note:** Community referral economics are not yet implemented.
+      The Main/Public splits are reserved for future use.
 
 9. TERMINATION
    This License terminates automatically if you breach its terms.
