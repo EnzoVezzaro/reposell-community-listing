@@ -1,4 +1,8 @@
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vitepress'
+
+const pkg = JSON.parse(readFileSync(resolve(import.meta.dirname, '../../package.json'), 'utf8'))
 
 export default defineConfig({
   title: 'reposell Community Listing',
@@ -66,5 +70,10 @@ export default defineConfig({
   markdown: {
     theme: 'github-dark',
     lineNumbers: true,
+  },
+  vite: {
+    define: {
+      __APP_VERSION__: JSON.stringify(pkg.version),
+    },
   },
 })
