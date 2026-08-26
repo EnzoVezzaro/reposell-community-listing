@@ -1,0 +1,15 @@
+{
+  "updated": "2026-08-26T12:59:16.359Z",
+  "source": "https://listing.reposell.dev/federation/v1/snapshot.json",
+  "listings": [
+    {
+      "id": "lst_9cebf418d001",
+      "repository": "EnzoVezzaro/reposell-example",
+      "release": "v0.1.0",
+      "sell_url": "https://EnzoVezzaro.github.io/reposell-example/sell/",
+      "payment_link": "https://buy.stripe.com/test_4gMeVebjL0jI3Ee0BHfrW01",
+      "amount": 5,
+      "currency": "USD"
+    }
+  ]
+}

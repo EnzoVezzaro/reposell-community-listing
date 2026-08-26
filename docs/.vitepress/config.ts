@@ -19,6 +19,7 @@ export default defineConfig({
     siteTitle: false,
     description: 'Community-operated reposell community listing - Deploy your own listing instance',
     nav: [
+      { text: 'Listings', link: '/registry/listings' },
       { text: 'Documentation', link: '/guide/' },
       { text: 'Deployment', link: '/deployment/' },
       { text: 'Official Registry', link: 'https://listing.reposell.dev' },

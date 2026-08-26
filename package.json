@@ -20,9 +20,10 @@
     "test:watch": "vitest",
     "lint": "oxlint",
     "typecheck": "tsc --noEmit",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "npm run registry:pull && vitepress dev docs",
+    "docs:build": "npm run registry:pull && vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "registry:pull": "node scripts/pull-federation.mjs"
   },
   "repository": {
     "type": "git",
