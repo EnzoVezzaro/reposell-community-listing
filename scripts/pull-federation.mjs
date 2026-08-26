@@ -15,21 +15,39 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const url = process.env['FEDERATION_URL'] ?? 'https://listing.reposell.dev/federation/v1/snapshot.json';
 
+// Tags to filter by — only pull listings with at least one matching tag.
+// Set REPOSELL_TAGS env var to override (comma-separated), or use defaults.
+const defaultTags = ['reposell', 'example'];
+const filterTags = (process.env['REPOSELL_TAGS'] ?? '').split(',').map((t) => t.trim()).filter(Boolean);
+const tags = filterTags.length > 0 ? filterTags : defaultTags;
+
 let listings = [];
 try {
   const res = await fetch(url, { headers: { accept: 'application/json' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const snap = await res.json();
-  listings = (snap.listings ?? []).map((entry) => ({
+  const allEntries = (snap.listings ?? []).map((entry) => ({
     id: entry.id,
     repository: entry.product?.repository ?? '(unknown)',
     release: entry.product?.release ?? '(unknown)',
+    description: entry.product?.description ?? '',
     sell_url: entry.seller?.sell_url ?? '',
     payment_link: entry.seller?.payment_link ?? '',
     amount: entry.listing?.discovery_price?.amount ?? null,
     currency: entry.listing?.discovery_price?.currency ?? '',
+    repo_price: entry.product?.price ?? null,
+    repo_currency: entry.product?.currency ?? '',
+    license: entry.product?.license ?? '',
+    tags: entry.tags ?? [],
     community: entry.community ?? null,
+    readme: entry.readme ?? null,
   }));
+  // Filter by tags — include if listing has at least one matching tag
+  listings = allEntries.filter((entry) => {
+    if (tags.length === 0) return true; // no filter = include all
+    return entry.tags.some((t) => tags.includes(t));
+  });
+  console.log(`tag filter [${tags.join(', ')}]: ${allEntries.length} total → ${listings.length} matching`);
 } catch (error) {
   console.warn(`federation pull failed (${error instanceof Error ? error.message : String(error)}) — empty index`);
 }
