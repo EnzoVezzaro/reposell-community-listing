@@ -42,9 +42,12 @@ try {
     community: entry.community ?? null,
     readme: entry.readme ?? null,
   }));
-  // Filter by tags — include if listing has at least one matching tag
+  // Filter by tags — include if listing has at least one matching tag.
+  // If a listing has no tags and we're using defaults (no custom REPOSELL_TAGS),
+  // include it so source data without tags is not silently dropped.
   listings = allEntries.filter((entry) => {
     if (tags.length === 0) return true; // no filter = include all
+    if (entry.tags.length === 0 && filterTags.length === 0) return true;
     return entry.tags.some((t) => tags.includes(t));
   });
   console.log(`tag filter [${tags.join(', ')}]: ${allEntries.length} total → ${listings.length} matching`);

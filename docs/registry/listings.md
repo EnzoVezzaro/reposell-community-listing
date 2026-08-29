@@ -2,7 +2,7 @@
 # Connected Listings
 
 Federated from the canonical reposell registry (`https://listing.reposell.dev/federation/v1/snapshot.json`). Last sync:
-2026-08-26T18:00:54.468Z
+2026-08-29T11:45:44.818Z
 
 | Repository | Release | Discovery | Details | Community |
 | --- | --- | --- | --- | --- |
