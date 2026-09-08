@@ -1,0 +1,45 @@
+name: verify
+
+# Mandatory compliance gate (AGENTS: "CI workflow verify.yml MUST pass for
+# deployment"). Fail-closed — a missing pinned official key or any lint /
+# typecheck / test failure blocks the pipeline.
+#
+# The pinned key at config/reposell/verification-key.pub is what federation
+# data is verified against. Provision it per config/reposell/README.md,
+#   curl -fsSL https://listing.reposell.dev/registry/verification-key.pub \
+#     -o config/reposell/verification-key.pub
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Require pinned official verification key
+        run: |
+          test -f config/reposell/verification-key.pub || \
+            { echo "MISSING config/reposell/verification-key.pub — pin the official key (see config/reposell/README.md)." >&2; exit 1; }
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
